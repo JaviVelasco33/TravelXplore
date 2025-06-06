@@ -1,0 +1,22 @@
+// Breakpoints
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+// Typography
+$font-family-primary: 'Montserrat', sans-serif;
+$font-family-secondary: 'Outifit', sans-serif;
+
+// Colors
+$color-primary: #00aac9;
+$color-secondary: #013154;
+$dark-color: #2c3e50;
+$light-color: #9c9c9c;
+$text-color: #555;
+
+// Z-index
+$z-back: -1;
+$z-normal: 1;
+$z-front: 10;
+$z-modal: 100;

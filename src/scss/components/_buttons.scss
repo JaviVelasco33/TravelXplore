@@ -1,0 +1,65 @@
+.btn {
+    padding: 0.8rem 2rem;
+    margin: 0 3rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+
+    @include respond-to(md) {
+        font-size: 1.2rem;
+        margin: 0 15rem;
+    }
+
+    @include respond-to(lg) {
+        font-size: 1.4rem;
+        margin: 0 15rem;
+    }
+}
+
+.btn-primary {
+    background-color: $color-primary;
+    color: white;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s forwards 0.3s;
+    transition: background-color 0.3s ease;
+
+    &:active {
+        background-color: darken($color-primary, 10%);
+    }
+
+    @include respond-to(lg) {
+        font-size: 1.2rem;
+        &:hover {
+            background-color: darken($color-primary, 10%);
+        }
+    }
+}
+
+.exp-tab-btn {
+    background-color: #f0f0f0;
+    color: $text-color;
+    border: none;
+    border-radius: 10px;
+    box-shadow:  6px 6px 12px #ccc, -6px -6px 12px #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    object-fit: cover;
+
+    &:hover {
+        box-shadow: inset 4px 4px 12px #ccc, inset -4px -4px 12px #fff;
+    }
+
+    &.active {
+        box-shadow: inset 4px 4px 12px #ccc, inset -4px -4px 12px #fff;
+    }
+}
+
+// Animations
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

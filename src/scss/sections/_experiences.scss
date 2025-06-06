@@ -1,0 +1,130 @@
+#experiences {
+    position: relative;
+    background: linear-gradient(rgb(255, 255, 255), rgb(135, 211, 255), rgb(66, 186, 255));
+    width: 100dvw;
+    height: auto;
+}
+
+.experiences-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 6rem 3rem;
+
+    h2 {
+        font-size: 3rem;
+        color: $text-color;
+        margin-bottom: 2rem;
+        text-align: center;
+        text-shadow: 4px 4px 10px #fff, -4px -4px 10px #fff;
+    }
+
+    @include respond-to(lg) {
+
+    }
+}
+
+.exp-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: $text-color;
+}
+
+.exp-tabs {
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    z-index: $z-front;
+    box-shadow: 3px 3px 10px #bbb;
+
+    @include respond-to(md) {
+
+    }
+
+    @include respond-to(lg) {
+        width: 70%;
+        padding: 1rem 2rem;
+    }
+}
+
+.exp-contents {
+    width: 90%;
+    background-color: #f0f0f0;
+    padding-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-5px);
+    border-radius: 0px 0px 20px 20px;
+    z-index: $z-normal;
+    box-shadow: 3px 3px 10px #aaa;
+
+    @include respond-to(lg) {
+        width: 65%;
+    }
+}
+
+.tab-content {
+    display: none;
+    opacity: 0;
+    padding: 1rem;
+    color: $text-color;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    &.active {
+        display: flex;
+        opacity: 1;
+        animation: tabFadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .img-container {
+        width: 100%;
+        height: auto;
+        margin: 0 0 1rem 0;
+
+        img  {
+        border-radius: 10px;
+        }
+    }
+
+    p {
+        padding: 0 0.3rem;
+    }
+
+    @include respond-to(lg) {
+        padding: 1rem 2rem;
+        flex-direction: row;
+        align-items: flex-start;
+
+        .img-container {
+        width: 80%;
+        margin: 0 1rem 0 0;
+        }
+
+        p {            
+            width: 100%;
+            font-size: 1.2rem;
+            padding: 0rem 2rem;
+        }
+    }    
+}
+
+@keyframes tabFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
