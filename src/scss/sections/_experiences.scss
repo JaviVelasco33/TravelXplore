@@ -22,10 +22,6 @@
         text-align: center;
         text-shadow: 4px 4px 10px #fff, -4px -4px 10px #fff;
     }
-
-    @include respond-to(lg) {
-
-    }
 }
 
 .exp-title {
@@ -83,7 +79,7 @@
     &.active {
         display: flex;
         opacity: 1;
-        animation: tabFadeIn 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        animation: tabFadeIn 0.7s ease-in-out;
     }
 
     .img-container {

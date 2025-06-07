@@ -3,7 +3,7 @@
 // import { initParallax } from './modules/parallax.js';
 // import { initDestinations } from './modules/destinations.js';
 import { initExperiences } from './modules/experiences.js';
-// import { initTestimonials } from './modules/testimonials.js';
+import { initTestimonials } from './modules/testimonials.js';
 // import { initContactForm } from './modules/contact-form.js';
 // import { initThemeSwitch } from './modules/theme-switch.js';
 
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // initParallax();
     // initDestinations();
     initExperiences();
-    // initTestimonials();
+    initTestimonials();
     // initContactForm();
     // initThemeSwitch();
     

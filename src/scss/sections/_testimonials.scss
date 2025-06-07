@@ -1,0 +1,158 @@
+#testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100dvw;
+    height: auto;
+    padding: 3rem 1rem;
+    background: linear-gradient(35deg, gray, white, gray);
+
+    @include respond-to(md) {
+        padding: 3rem 1rem;
+    }
+
+    @include respond-to(lg) {
+        padding: 3rem 1rem;
+    }
+}
+
+.test-container {
+    @include respond-to(lg) {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.test-carousel {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include respond-to(md) {
+        padding: 4rem 2rem;
+    }
+
+    @include respond-to(lg) {
+        width: 70%;
+        justify-content: space-between;
+        padding: 2rem 1rem;
+    }
+
+    .carousel-track {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel-item {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        aspect-ratio: 9 / 16;
+
+        &.active {
+            display: block;
+            justify-content: center;
+            align-items: center;
+            z-index: $z-front;
+            animation: carouselFadeIn 1s ease-in-out;
+
+
+            img {
+                width: auto;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+                display: block;
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+
+            }
+        }
+    }
+}
+
+.carousel-indicators {
+    margin: 3rem 0 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    .indicator {
+        width: 10px;
+        height: 10px;
+        background-color: #ffffff55;
+        border-radius: 50%;
+        border: 1px solid #81818155;
+        transition: background-color 0.3s ease-in-out;
+
+        &.active {
+            background-color: $color-primary;
+        }
+    }
+}
+
+.test-texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+}
+
+.test-review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: reviewsFadeIn 1s ease-in-out;
+}
+
+.test-profile {
+    width: 5rem;
+    height: auto;
+    border-radius: 100%;
+    border: $text-color 1px solid;
+    transform: translateY(0.8rem);
+    background-color: #fff;
+    box-shadow: 0px -5px 20px #ccc;
+}
+
+.test-p {
+    font-size: 1.2rem;
+    color: $text-color;
+    background-color: #ddd;
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.5;
+    padding: 1rem;
+    border: $text-color 1px solid;
+    box-shadow: 0px 5px 20px #ccc;
+}
+
+@keyframes carouselFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes reviewsFadeIn {
+    from {
+        opacity: 0;
+        transform:  translateX(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
