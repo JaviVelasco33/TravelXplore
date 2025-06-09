@@ -26,78 +26,6 @@
     }
 }
 
-.test-carousel {
-    padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    @include respond-to(md) {
-        padding: 4rem 2rem;
-    }
-
-    @include respond-to(lg) {
-        width: 70%;
-        justify-content: space-between;
-        padding: 2rem 1rem;
-    }
-
-    .carousel-track {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .carousel-item {
-        display: none;
-        justify-content: center;
-        align-items: center;
-        aspect-ratio: 9 / 16;
-
-        &.active {
-            display: block;
-            justify-content: center;
-            align-items: center;
-            z-index: $z-front;
-            animation: carouselFadeIn 1s ease-in-out;
-
-
-            img {
-                width: auto;
-                height: 100%;
-                object-fit: cover;
-                object-position: center;
-                display: block;
-                border-radius: 20px;
-                overflow: hidden;
-                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-
-            }
-        }
-    }
-}
-
-.carousel-indicators {
-    margin: 3rem 0 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-
-    .indicator {
-        width: 10px;
-        height: 10px;
-        background-color: #ffffff55;
-        border-radius: 50%;
-        border: 1px solid #81818155;
-        transition: background-color 0.3s ease-in-out;
-
-        &.active {
-            background-color: $color-primary;
-        }
-    }
-}
-
 .test-texts {
     display: flex;
     flex-direction: column;
@@ -106,13 +34,18 @@
     width: 100%;
     height: auto;
     padding: 1rem;
+    z-index: $z-normal;
 }
 
 .test-review {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: reviewsFadeIn 1s ease-in-out;
+    animation: reviewsFadeInY 1s ease-in-out;
+
+    @include respond-to(lg) {
+        animation: reviewsFadeInX 1s ease-in-out;
+    }
 }
 
 .test-profile {
@@ -146,7 +79,7 @@
     }
 }
 
-@keyframes reviewsFadeIn {
+@keyframes reviewsFadeInX {
     from {
         opacity: 0;
         transform:  translateX(-200px);
@@ -154,5 +87,16 @@
     to {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes reviewsFadeInY {
+    from {
+        opacity: 0;
+        transform:  translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

@@ -47,7 +47,7 @@
     text-underline-offset: 0.2rem;
     color: white;
     padding: 0.5rem;            
-    transition: text-decoration 0.3s, transform 0.3s, color 0.3s;
+    transition: text-decoration 0.3s, transform 0.3s, color 0.3s, text-shadow 0.3s;
 
     @include respond-to(md) {
         font-size: 1rem;
@@ -61,8 +61,12 @@
         &:hover {
             text-decoration: overline;
             color: $color-primary;
-            text-shadow: 0px 0px 15px white;
-            transform: scale(1.2);
+            text-shadow: 
+            -1px -1px 10px black,
+            1px -1px 10px black,
+            -1px 1px 10px black,
+            1px 1px 10px black;
+            transform: scale(1.3);
         }
     }
 }

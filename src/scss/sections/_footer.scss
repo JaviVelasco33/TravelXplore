@@ -1,0 +1,96 @@
+#footer {
+    width: 100dvw;
+    height: auto;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.footer-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    color: #fff;
+
+    p, a {
+        color: #fff;
+        font-size: 0.8rem;
+        margin: 0.5rem 0;
+    }
+
+    @include respond-to(lg) {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem 10rem;
+
+        p, a {
+            color: #fff;
+            font-size: 1.7rem;
+            margin: 0.5rem 0;
+        }
+    }
+}
+
+.footer-logo {
+    width: 5rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include respond-to(lg) {
+        width: 10rem;
+    }
+}
+
+.footer-info {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
+        li {
+            margin: 0.5rem 0;
+                
+            &:hover {
+                text-decoration: underline 2px solid $color-primary;
+                cursor: pointer;
+                text-underline-offset: 0.4rem;
+
+            }
+        }
+    }
+    @include respond-to(lg) {
+        ul {
+            display: flex;
+            flex-direction: row;
+
+            li {
+                margin-right: 5rem;
+            }
+        }
+    }
+}
+
+.footer-rights {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+
+    p {
+        font-size: 0.7rem;
+        margin: 0.5rem 0;
+
+        @include respond-to(lg) {
+            font-size: 1.5rem;
+        }
+    }
+}
