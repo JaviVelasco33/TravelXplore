@@ -152,6 +152,7 @@ h5 {
   overflow: hidden;
   -o-object-fit: cover;
      object-fit: cover;
+  transform: translateY(-20px);
 }
 @media (min-width: 768px) and (max-width: 1023.98px) {
   .dest-card {
@@ -163,17 +164,18 @@ h5 {
     width: 25%;
   }
   .dest-card img {
+    min-height: 500px;
     transition: transform 0.3s ease-in-out;
   }
   .dest-card img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) translateY(-20px);
   }
 }
 
 .dest-card-frame {
   width: 100%;
   min-height: 150px;
-  max-height: 200px;
+  max-height: 350px;
   border: 0px solid transparent;
   border-radius: 10px 10px 0px 0px;
   overflow: hidden;
@@ -207,7 +209,7 @@ h5 {
 }
 @media (min-width: 1024px) {
   .test-carousel {
-    width: 70%;
+    width: 50%;
     justify-content: space-between;
     padding: 2rem 1rem;
   }
@@ -380,9 +382,9 @@ h5 {
   position: fixed;
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
-  -webkit-backdrop-filter: blur(0.1rem);
-          backdrop-filter: blur(0.1rem);
+  box-shadow: -0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.7);
+  -webkit-backdrop-filter: blur(0.2rem);
+          backdrop-filter: blur(0.2rem);
 }
 
 .header-container {
@@ -443,7 +445,7 @@ h5 {
   .header-nav-item:hover {
     text-decoration: overline;
     color: #00aac9;
-    text-shadow: -1px -1px 10px black, 1px -1px 10px black, -1px 1px 10px black, 1px 1px 10px black;
+    text-shadow: -1px -1px 10px #013154, 1px -1px 10px #013154, -1px 1px 10px #013154, 1px 1px 10px #013154;
     transform: scale(1.3);
   }
 }

@@ -3,8 +3,8 @@
     position: fixed;
     z-index: $z-modal;
     background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(0.1rem);
+    box-shadow: -0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(0.2rem);
 }
 
 .header-container {
@@ -62,10 +62,10 @@
             text-decoration: overline;
             color: $color-primary;
             text-shadow: 
-            -1px -1px 10px black,
-            1px -1px 10px black,
-            -1px 1px 10px black,
-            1px 1px 10px black;
+            -1px -1px 10px $color-secondary,
+            1px -1px 10px $color-secondary,
+            -1px 1px 10px $color-secondary,
+            1px 1px 10px $color-secondary,;
             transform: scale(1.3);
         }
     }

@@ -15,6 +15,7 @@
         width: auto;
         overflow: hidden;
         object-fit: cover;
+        transform: translateY(-20px);
     }
 
     @include respond-to(md) {
@@ -23,12 +24,13 @@
 
     @include respond-to(lg) {
         width: 25%;
-
+        
         img {
+            min-height: 500px;
         transition: transform 0.3s ease-in-out;
 
             &:hover {
-                transform: scale(1.1);
+                transform: scale(1.1) translateY(-20px);
             }        
         }
     }
@@ -37,7 +39,7 @@
 .dest-card-frame {
     width: 100%;
     min-height: 150px;
-    max-height: 200px;
+    max-height: 350px;
     border: 0px solid transparent;
     border-radius: 10px 10px 0px 0px;
     overflow: hidden;
