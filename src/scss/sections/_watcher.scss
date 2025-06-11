@@ -2,20 +2,22 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 90dvw;
+    width: 0dvw;
     height: auto;
     background-color: white;
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.75);
     z-index: $z-front;
+}
 
+.watcher-initAnim {
+    animation: initWidth-sm 0.7s ease-in-out forwards;
     @include respond-to(md) {
-        width: 80dvw;
+        animation: initWidth-md 0.7s ease-in-out forwards;
     }
-
     @include respond-to(lg) {
-        width: 70dvw;
+        animation: initWidth-lg 0.7s ease-in-out forwards;
     }
 }
 
@@ -26,6 +28,7 @@
     padding: 0.1rem;
     width: 100%;
     height: 100%;
+    opacity: 0;
 }
 
 .watcher-filters {

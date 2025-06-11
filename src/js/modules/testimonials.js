@@ -9,12 +9,33 @@ export function initTestimonials() {
     function showItem(index) {
         items.forEach((item, i) => {
             item.classList.toggle('active', i === index);
+            void item.offsetWidth; // Reflow to restart animation
         });
+
         indicators.forEach((ind, i) => {
             ind.classList.toggle('active', i === index);
+            void ind.offsetWidth; // Reflow to restart animation
         });
+
         reviews.forEach((review, i) => {
             review.style.display = (i === index) ? 'flex' : 'none';
+            review.style.animation = 'none';
+            void review.offsetWidth;
+            if (i === index) {
+                const width = window.innerWidth;
+                if (width < 576) {
+                    review.style.animation = 'fadeInUp 0.5s ease-in forwards';
+                } 
+                else if (width >= 992) {
+                    review.style.animation = 'fadeInLeft 0.5s ease-in forwards';
+                } 
+                else {
+                    review.style.animation = 'fadeIn 0.5s ease-in forwards';
+                }
+            } 
+            else {
+                review.style.animation = 'none';
+            }
         });
         current = index;
     }

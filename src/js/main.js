@@ -1,5 +1,5 @@
 // Import modules
-// import { initNavigation } from './modules/navigation.js';
+import { initNavigation } from './modules/navigation.js';
 // import { initParallax } from './modules/parallax.js';
 // import { initDestinations } from './modules/destinations.js';
 import { initExperiences } from './modules/experiences.js';
@@ -10,7 +10,7 @@ import { initContactForm } from './modules/contact-form.js';
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize all modules
-    // initNavigation();
+    initNavigation();
     // initParallax();
     // initDestinations();
     initExperiences();

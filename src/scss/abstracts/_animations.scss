@@ -1,0 +1,91 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes initBG {
+    from {
+        filter: brightness(1);
+    }
+    to {
+        filter: brightness(0.4);
+    }
+}
+
+@keyframes initWidth-sm {
+    from {
+        width: 0dvw;
+    }
+    to {
+        width: 90dvw;
+    }
+}
+@keyframes initWidth-md {
+    from {
+        width: 0dvw;
+    }
+    to {
+        width: 80dvw;
+    }
+}
+@keyframes initWidth-lg {
+    from {
+        width: 0dvw;
+    }
+    to {
+        width: 70dvw;
+    }
+}
+
+@keyframes fadeInOut {
+    0%   { opacity: 0; transform: translateX(-50%) translateY(-40px);}
+    10%  { opacity: 1; transform: translateX(-50%) translateY(0);}
+    90%  { opacity: 1; transform: translateX(-50%) translateY(0);}
+    100% { opacity: 0; transform: translateX(-50%) translateY(-40px);}
+}

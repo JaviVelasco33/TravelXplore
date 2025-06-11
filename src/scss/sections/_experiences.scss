@@ -79,7 +79,7 @@
     &.active {
         display: flex;
         opacity: 1;
-        animation: tabFadeIn 0.7s ease-in-out;
+        animation: fadeInUp 0.7s ease-in-out;
     }
 
     .img-container {
@@ -112,15 +112,4 @@
             padding: 0rem 5rem;
         }
     }    
-}
-
-@keyframes tabFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
