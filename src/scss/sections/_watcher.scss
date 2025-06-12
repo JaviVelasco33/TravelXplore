@@ -12,12 +12,12 @@
 }
 
 .watcher-initAnim {
-    animation: initWidth-sm 0.7s ease-in-out forwards;
+    animation: initWidth-dvw-sm 0.7s ease-in-out forwards;
     @include respond-to(md) {
-        animation: initWidth-md 0.7s ease-in-out forwards;
+        animation: initWidth-dvw-md 0.7s ease-in-out forwards;
     }
     @include respond-to(lg) {
-        animation: initWidth-lg 0.7s ease-in-out forwards;
+        animation: initWidth-dvw-lg 0.7s ease-in-out forwards;
     }
 }
 

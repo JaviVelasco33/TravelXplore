@@ -35,8 +35,8 @@
     border-radius: 20px;
     padding: 1rem 1rem;
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: center;
+    width: 0%;
     z-index: $z-front;
     box-shadow: 3px 3px 10px #bbb;
 
@@ -45,22 +45,34 @@
     }
 
     @include respond-to(lg) {
-        width: 70%;
         padding: 1rem 2rem;
+    }
+}
+
+.exp-initAnim {
+    animation: initWidth-percent-sm 1s ease-in-out forwards;
+    
+    @include respond-to(md) {
+        justify-content: center;
+        animation: initWidth-percent-md 1s ease-in-out forwards;
+    }
+
+    @include respond-to(lg) {
+        justify-content: space-around;
+        animation: initWidth-percent-lg 1s ease-in-out forwards;
     }
 }
 
 .exp-contents {
     width: 90%;
     background-color: #f0f0f0;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(-5px);
     border-radius: 0px 0px 20px 20px;
     z-index: $z-normal;
-    box-shadow: 3px 3px 10px #aaa;
+    box-shadow: 0px 5px 15px #aaa;
 
     @include respond-to(lg) {
         width: 65%;

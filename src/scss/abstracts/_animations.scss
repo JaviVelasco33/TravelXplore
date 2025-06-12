@@ -49,7 +49,7 @@
     }
 }
 
-@keyframes initBG {
+@keyframes initBG-hero {
     from {
         filter: brightness(1);
     }
@@ -58,7 +58,17 @@
     }
 }
 
-@keyframes initWidth-sm {
+@keyframes initBG-contact {
+    from {
+        filter: blur(0px) brightness(1);
+    
+    }
+    to {
+        filter: blur(3px) brightness(0.6);
+    }
+}
+
+@keyframes initWidth-dvw-sm {
     from {
         width: 0dvw;
     }
@@ -66,7 +76,7 @@
         width: 90dvw;
     }
 }
-@keyframes initWidth-md {
+@keyframes initWidth-dvw-md {
     from {
         width: 0dvw;
     }
@@ -74,12 +84,45 @@
         width: 80dvw;
     }
 }
-@keyframes initWidth-lg {
+@keyframes initWidth-dvw-lg {
     from {
         width: 0dvw;
     }
     to {
         width: 70dvw;
+    }
+}
+
+@keyframes initWidth-percent-sm {
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes initWidth-percent-md {
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+    to {
+        width: 85%;
+        opacity: 1;
+    }
+}
+
+@keyframes initWidth-percent-lg {
+    from {
+        width: 0%;
+        opacity: 0;
+    }
+    to {
+        width: 70%;
+        opacity: 1;
     }
 }
 

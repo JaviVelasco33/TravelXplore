@@ -24,9 +24,9 @@
 .btn-primary {
     background-color: $color-primary;
     color: white;
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 1s forwards 0.3s;
+    opacity: 1;
+    // transform: translateY(20px);
+    // animation: fadeInUp 1s forwards 0.3s;
     transition: background-color 0.3s ease;
 
     &:active {
