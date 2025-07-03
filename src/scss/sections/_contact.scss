@@ -17,12 +17,11 @@
 
 .contact-bg {
     position: absolute;
-    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    filter: blur(0px) brightness(1);
+    filter: brightness(1);
     pointer-events: none;
     z-index: $z-back;
 }
