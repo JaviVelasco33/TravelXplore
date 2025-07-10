@@ -20,5 +20,8 @@ TravelXplore es una página web para una agencia de viajes ficticia, desarrollad
 🚀 Cómo ver el proyecto:
 - Puedes clonar este mismo repositorio y abrir el archivo index.html en tu navegador para ver el sitio web en funcionamiento.
 
+_______________________________________________________________________________________________________________________________
+
 📌 Estado del proyecto:
-- Este proyecto se da por finalizado y no se plantean actualizaciones en un futuro.
+
+Este proyecto se da por finalizado y no se plantean actualizaciones en un futuro.
